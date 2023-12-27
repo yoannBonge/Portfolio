@@ -1,0 +1,16 @@
+@import "/common.scss";
+
+.main-content {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  .my-logo {
+    height: 7em;
+  }
+  .current-year {
+    font-size: 2em;
+  }
+  .firstname-lastname {
+    font-size: 2em;
+  }
+}

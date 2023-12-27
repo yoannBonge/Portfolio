@@ -1,0 +1,43 @@
+////////////////////////////////VARIABLES & MIXINS
+
+////////FONTS
+$main-font: "Readex Pro", sans-serif;
+$title-font: "Readex Pro", sans-serif;
+$quote-font: "Marcellus", serif;
+
+////////COLORS
+$purple: #69648d;
+$light-grey: #c9c9c9;
+$html-color: #e44d26;
+$css-color: #2d53e5;
+$js-color: #c6b31f;
+$lighthouse-color: #fff15d;
+$wave-color: #4678b4;
+$react-color: #1082a7;
+$sass-color: #ce6b9c;
+$node-color: #58a149;
+$mongodb-color: #419a45;
+$express-color: #f7e01d;
+$openclassrooms-color: #7451eb;
+
+////////LOGOS SIZES
+@mixin tools-icons-dimensions {
+  font-size: 7em;
+  margin: 0.3em;
+}
+@mixin lighthouse-logo-dimensions {
+  width: 8em;
+  margin: 2em;
+}
+@mixin wave-logo-dimensions {
+  width: 8em;
+  margin: 2em;
+}
+@mixin mongodb-logo-dimensions {
+  width: 4em;
+  margin: 2em;
+}
+@mixin express-logo-dimensions {
+  width: 12em;
+  margin: 2em;
+}
