@@ -9,6 +9,7 @@ import {
 import "./header.scss";
 
 const Header = () => {
+  //////////////////////////////////////////////////////////////////////STATE
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,12 +24,14 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  //////////////////////////////////////////////////////////////////////RENDER
   return (
     <header className={scrolled ? "header is-scrolled" : "header"}>
       <img
         className='logo'
-        src='my-logo.png'
-        alt='logo du site vitrine de Yoann Bonge'
+        src='my-logo.webp'
+        alt='logo du site de Yoann Bonge'
       />
       <nav className='menu'>
         <ul>
@@ -38,30 +41,19 @@ const Header = () => {
               onClick={() => scroll.scrollToTop()}
               smooth={true}
               duration={500}
-              activeClass='active'
             >
               Accueil
             </Link>
           </li>
 
           <li>
-            <Link
-              to='my-projects'
-              smooth={true}
-              duration={500}
-              activeClass='active'
-            >
+            <Link to='my-projects' smooth={true} duration={500}>
               Mes Projets
             </Link>
           </li>
 
           <li>
-            <Link
-              to='contact'
-              smooth={true}
-              duration={500}
-              activeClass='active'
-            >
+            <Link to='contact' smooth={true} duration={500} offset={75}>
               Contact
             </Link>
           </li>
@@ -74,6 +66,7 @@ const Header = () => {
               href='https://github.com/yoannBonge'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='Compte Github de Yoann Bonge'
             >
               <FontAwesomeIcon icon={faSquareGithub} />
             </a>
@@ -83,6 +76,7 @@ const Header = () => {
               href='https://twitter.com/Yoann_Bonge'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='Compte X (anciennement Twitter) de Yoann Bonge'
             >
               <FontAwesomeIcon icon={faSquareXTwitter} />
             </a>
@@ -92,6 +86,7 @@ const Header = () => {
               href='https://www.linkedin.com/in/yoann-bonge-87bb7a2a5/'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='Compte LinkedIn de Yoann Bonge'
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>

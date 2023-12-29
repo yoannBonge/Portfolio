@@ -1,5 +1,4 @@
 import Header from "../../components/header/Header";
-// import ProjectsData from "projects-data.json";
 import Project from "../../components/project/Project";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -25,7 +24,7 @@ const Home = () => {
             <div className='headline'>
               <img
                 className='profile-pic'
-                src='profile-pic.png'
+                src='profile-pic.webp'
                 alt='Portrait de Yoann Bonge'
               />
               <span className='about-me-title'>Yoann Bonge</span>
@@ -38,6 +37,9 @@ const Home = () => {
               <a
                 className='openclassrooms'
                 href='https://openclassrooms.com/fr/'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label="Site d'Openclassrooms"
               >
                 OpenClassrooms
               </a>
@@ -51,6 +53,9 @@ const Home = () => {
               <a
                 className='openclassrooms'
                 href='https://openclassrooms.com/fr/'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label="Site d'Openclassrooms"
               >
                 OpenClassrooms
               </a>
@@ -78,8 +83,16 @@ const Home = () => {
               githubLink='https://github.com/yoannBonge/Booki'
               toolsIcons={
                 <>
-                  <FontAwesomeIcon icon={faHtml5} className='html-logo' />
-                  <FontAwesomeIcon icon={faCss3Alt} className='css-logo' />
+                  <FontAwesomeIcon
+                    icon={faHtml5}
+                    className='html-logo'
+                    title='HTML5'
+                  />
+                  <FontAwesomeIcon
+                    icon={faCss3Alt}
+                    className='css-logo'
+                    title='CSS3'
+                  />
                 </>
               }
             >
@@ -108,9 +121,21 @@ const Home = () => {
               reverseRow
               toolsIcons={
                 <>
-                  <FontAwesomeIcon icon={faJs} className='js-logo' />
-                  <FontAwesomeIcon icon={faHtml5} className='html-logo' />
-                  <FontAwesomeIcon icon={faCss3Alt} className='css-logo' />
+                  <FontAwesomeIcon
+                    icon={faJs}
+                    className='js-logo'
+                    title='Javascript'
+                  />
+                  <FontAwesomeIcon
+                    icon={faHtml5}
+                    className='html-logo'
+                    title='HTML5'
+                  />
+                  <FontAwesomeIcon
+                    icon={faCss3Alt}
+                    className='css-logo'
+                    title='CSS3'
+                  />
                 </>
               }
             >
@@ -138,8 +163,18 @@ const Home = () => {
               githubLink='https://github.com/yoannBonge/NinaCarducci'
               toolsIcons={
                 <>
-                  <img src='lighthouse-logo.webp' className='lighthouse-logo' />
-                  <img src='wave-logo.webp' className='wave-logo' />
+                  <img
+                    src='lighthouse-logo.webp'
+                    className='lighthouse-logo'
+                    alt='Logo de Google Lighthouse'
+                    title='Google Lighthouse'
+                  />
+                  <img
+                    src='wave-logo.webp'
+                    className='wave-logo'
+                    alt='Logo de Wave'
+                    title='Wave'
+                  />
                 </>
               }
             >
@@ -168,8 +203,16 @@ const Home = () => {
               reverseRow
               toolsIcons={
                 <>
-                  <FontAwesomeIcon icon={faReact} className='react-logo' />
-                  <FontAwesomeIcon icon={faSass} className='sass-logo' />
+                  <FontAwesomeIcon
+                    icon={faReact}
+                    className='react-logo'
+                    title='React'
+                  />
+                  <FontAwesomeIcon
+                    icon={faSass}
+                    className='sass-logo'
+                    title='Sass'
+                  />
                 </>
               }
             >
@@ -196,16 +239,30 @@ const Home = () => {
               githubLink='https://github.com/yoannBonge/MonVieuxGrimoire'
               toolsIcons={
                 <>
-                  <FontAwesomeIcon icon={faNodeJs} className='node-logo' />
-                  <img src='mongodb-logo.webp' className='mongodb-logo' />
-                  <img src='express-logo.webp' className='express-logo' />
+                  <FontAwesomeIcon
+                    icon={faNodeJs}
+                    className='node-logo'
+                    title='Node.js'
+                  />
+                  <img
+                    src='mongodb-logo.webp'
+                    className='mongodb-logo'
+                    alt='Logo de MongoDB'
+                    title='MongoDB'
+                  />
+                  <img
+                    src='express-logo.webp'
+                    className='express-logo'
+                    alt="Logo d'Express.js"
+                    title='Express.js'
+                  />
                 </>
               }
             >
               <p>
                 <span className='purple'>
                   (Projet réalisé dans le cadre de ma formation)
-                </span>{" "}
+                </span>
                 <br /> <br /> Ce projet était destiné à nous initier au backend
                 avec la création d'une API pour Mon "Vieux Grimoire", un site de
                 notation de livres. Une initiation aux opérations CRUD, à la
@@ -250,13 +307,13 @@ const Home = () => {
             <img
               src='mongodb-logo.webp'
               className='mongodb-logo'
-              alt='MongoDB'
+              alt='Logo de MongoDB'
               title='MongoDB'
             />
             <img
               src='express-logo.webp'
               className='express-logo'
-              alt='Express.js'
+              alt="Logo d'Express.js"
               title='Express.js'
             />
           </div>

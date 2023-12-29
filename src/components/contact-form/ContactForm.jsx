@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./contact_form.scss";
 
 const ContactForm = () => {
+  //////////////////////////////////////////////////////////////////////STATE
   const {
     handleSubmit,
     register,
@@ -12,8 +13,10 @@ const ContactForm = () => {
   } = useForm();
 
   const [isEmailSent, setIsEmailSent] = useState(false);
-
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+  //////////////////////////////////////////////////////////////////////BEHAVIOR
   const onSubmit = (data) => {
+    setIsSendingEmail(true);
     sendEmail(data);
   };
 
@@ -30,6 +33,7 @@ const ContactForm = () => {
       .then((response) => {
         console.log("E-mail envoyé avec succès:", response);
         setIsEmailSent(true);
+        setIsSendingEmail(false);
         setTimeout(() => {
           setIsEmailSent(false);
           reset();
@@ -37,16 +41,19 @@ const ContactForm = () => {
       })
 
       .catch((error) => {
-        console.error("Erreur lors de l'envoi de l'e-mail:", error);
+        console.error("Erreur lors de l'envoi de l'email:", error);
+        setIsSendingEmail(false);
       });
   };
-
+  //////////////////////////////////////////////////////////////////////RENDER
   return (
     <>
-      <p className='introduction'>
-        Pour toute question, demande d'information ou autre, c'est ici que ça se
-        passe.
-      </p>
+      <div className='introduction-container'>
+        <p className='introduction'>
+          Pour toute question, demande d'information ou autre, c'est ici que ça
+          se passe.
+        </p>
+      </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* NAME */}
@@ -73,9 +80,7 @@ const ContactForm = () => {
           className={errors.email ? "error-style" : ""}
         />
         {errors.email && (
-          <span className='error-warning'>
-            <span className='error-warning'>{errors.email.message}</span>
-          </span>
+          <span className='error-warning'>{errors.email.message}</span>
         )}
         {/* MESSAGE */}
         <label htmlFor='message'>Message</label>
@@ -89,12 +94,21 @@ const ContactForm = () => {
         {errors.message && (
           <span className='error-warning'>{errors.message.message}</span>
         )}
+        {isSendingEmail && (
+          <div className='loading'>
+            <span className='loading-dot'></span>
+            <span className='loading-dot'></span>
+            <span className='loading-dot'></span>
+          </div>
+        )}
         {isEmailSent && (
           <span className='success-message'>
             Votre message a bien été envoyé !
           </span>
         )}
-        <button type='submit'>Envoyer</button>
+        <button className='send-button' type='submit' disabled={isSendingEmail}>
+          Envoyer
+        </button>
       </form>
     </>
   );

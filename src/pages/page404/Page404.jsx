@@ -1,4 +1,3 @@
-import Header from "../../components/header/Header";
 import "./page404.scss";
 
 const Page404 = () => {
@@ -10,7 +9,11 @@ const Page404 = () => {
         <span className='description'>
           Il semblerait que cette page n'existe pas...
         </span>
-        <a className='back-home' href='/'>
+        <a
+          className='back-home'
+          href='/'
+          aria-label="Revenir à la page d'accueil"
+        >
           Retourner à la page d'accueil
         </a>
       </main>

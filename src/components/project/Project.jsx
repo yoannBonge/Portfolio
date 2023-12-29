@@ -13,6 +13,7 @@ const Project = ({
   toolsIcons,
   reverseRow,
 }) => {
+  //////////////////////////////////////////////////////////////////////STATE
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -23,22 +24,24 @@ const Project = ({
     setIsModalOpen(false);
   };
 
+  const toLeftOrRight = reverseRow ? "reverse" : "";
+  //////////////////////////////////////////////////////////////////////RENDER
   return (
-    <div className={`project-container ${reverseRow ? "reverse" : ""}`}>
+    <div className={`project-container ${toLeftOrRight}`}>
       <div className='see-more' onClick={openModal}>
         <div className='screenshot-container'>
           <img
-            className={`picture ${reverseRow ? "reverse" : ""}`}
+            className={`picture ${toLeftOrRight}`}
             src={mainScreenshot}
-            alt=''
+            alt={`Screenshot du site ${title}`}
           />
           <span className='overlay-text'>Voir plus</span>
         </div>
       </div>
 
       <div className='presentation'>
-        <h3 className={`title ${reverseRow ? "reverse" : ""}`}>{title}</h3>
-        <div className='summary'>{summary}</div>
+        <h3 className={`title ${toLeftOrRight}`}>{title}</h3>
+        <div className={`summary ${toLeftOrRight}`}>{summary}</div>
       </div>
       <div className='tools'>{toolsIcons}</div>
 
@@ -49,36 +52,41 @@ const Project = ({
         className='modal'
         closeTimeoutMS={600}
       >
-        {" "}
         <div className='modal-content'>
           <i class='fa-solid fa-xmark' onClick={closeModal}></i>
           <div className='image-and-details'>
             <img
               className='responsive-illustration'
               src={responsiveIllustration}
-              alt=''
+              alt={`Illustration du site ${title} s'affichant sur différents supports`}
             />
             <div className='details'>{children}</div>
           </div>
           <div className='links-container'>
-            <a
-              className='link'
-              href={githubLink}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              voir le Github
-            </a>
-
-            {deployment && (
+            <div className='link-wrapper'>
               <a
                 className='link'
-                href={deployment}
+                href={githubLink}
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label={`Dépôt Github du site ${title}`}
               >
-                voir le site
+                voir le Github
               </a>
+            </div>
+
+            {deployment && (
+              <div className='link-wrapper'>
+                <a
+                  className='link'
+                  href={deployment}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label={`Site ${title} déployé `}
+                >
+                  voir le site
+                </a>
+              </div>
             )}
           </div>
         </div>

@@ -5,7 +5,7 @@
   margin: 3em auto 0 auto;
   padding: 2em;
   width: 60%;
-  background-image: url("background-light.png");
+  background-image: url("background-light.webp");
   background-repeat: repeat;
   color: black;
   text-align: justify;
@@ -13,32 +13,40 @@
   border-radius: 80px 15px 80px 15px;
   box-shadow: 0px 0px 4px rgb(255, 255, 255);
   gap: 2.5em;
-  .headline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5em;
-    .profile-pic {
-      width: 10em;
-    }
-    .about-me-title {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1em;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .presentation-text {
-    font-size: 1.3em;
-  }
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+}
+.profile-pic {
+  width: 10em;
+}
+.about-me-title {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.presentation-text {
+  font-size: 1.3em;
+}
+.openclassrooms {
+  color: $openclassrooms-color;
+  margin-left: 7px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .author {
   text-align: left;
   margin-top: 1em;
 }
+
 #my-projects {
   padding: 0 2em;
   .projects-items {
@@ -46,12 +54,13 @@
     gap: 6em;
   }
 }
+
 #my-skills {
   width: 100%;
   .skills-container {
     display: flex;
     align-items: center;
-    background-image: url("background-light.png");
+    background-image: url("background-light.webp");
     box-shadow: 0px 0px 4px rgb(255, 255, 255);
     gap: 0.5em;
     .html-logo {
