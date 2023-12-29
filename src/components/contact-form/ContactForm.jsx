@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import "./contact_form.scss";
@@ -7,13 +7,13 @@ const ContactForm = () => {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    // Logique de gestion du formulaire, traitement des données, etc.
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
-    // Envoi de l'e-mail avec Email.js
+  const onSubmit = (data) => {
     sendEmail(data);
   };
 
@@ -29,7 +29,13 @@ const ContactForm = () => {
       })
       .then((response) => {
         console.log("E-mail envoyé avec succès:", response);
+        setIsEmailSent(true);
+        setTimeout(() => {
+          setIsEmailSent(false);
+          reset();
+        }, 3000);
       })
+
       .catch((error) => {
         console.error("Erreur lors de l'envoi de l'e-mail:", error);
       });
@@ -82,6 +88,11 @@ const ContactForm = () => {
         />
         {errors.message && (
           <span className='error-warning'>{errors.message.message}</span>
+        )}
+        {isEmailSent && (
+          <span className='success-message'>
+            Votre message a bien été envoyé !
+          </span>
         )}
         <button type='submit'>Envoyer</button>
       </form>

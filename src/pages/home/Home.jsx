@@ -1,5 +1,6 @@
 import Header from "../../components/header/Header";
-import ProjectPreview from "../../components/project-preview/ProjectPreview";
+// import ProjectsData from "projects-data.json";
+import Project from "../../components/project/Project";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -9,9 +10,9 @@ import {
   faSass,
   faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
+import ContactForm from "../../components/contact-form/ContactForm";
 import Footer from "../../components/footer/Footer";
 import "./home.scss";
-import ContactForm from "../../components/contact-form/ContactForm";
 
 const Home = () => {
   return (
@@ -68,12 +69,14 @@ const Home = () => {
         <section id='my-projects'>
           <h2>Projets</h2>
           <div className='projects-items'>
-            <ProjectPreview
-              projectTitle='Booki'
-              projectScreenshot='booki.webp'
-              projectDeployment='https://yoannbonge.github.io/Booki/'
+            <Project
+              title='Booki'
+              mainScreenshot='booki.webp'
+              summary="Intégration d'une page web en HTML et CSS"
+              responsiveIllustration='booki-responsive.webp'
+              deployment='https://yoannbonge.github.io/Booki/'
               githubLink='https://github.com/yoannBonge/Booki'
-              brandsIcons={
+              toolsIcons={
                 <>
                   <FontAwesomeIcon icon={faHtml5} className='html-logo' />
                   <FontAwesomeIcon icon={faCss3Alt} className='css-logo' />
@@ -81,20 +84,29 @@ const Home = () => {
               }
             >
               <p>
-                (Projet réalisé dans le cadre de ma formation) <br /> <br /> La
-                mission était d'intégrer en HTML/CSS la page d'accueil du site
-                Booki, une agence de voyage. Toutes les maquettes étaient
-                fournies en versions desktop, tablette et mobile. Une bonne
-                introduction au HTML/CSS ainsi qu'au responsive.
+                <span className='purple'>
+                  (Projet réalisé dans le cadre de ma formation)
+                </span>{" "}
+                <br /> <br /> La mission était d'intégrer en HTML/CSS la page
+                d'accueil du site Booki, une agence de voyage. Toutes les
+                maquettes étaient fournies en versions desktop, tablette et
+                mobile. En découvrant le HTML et le CSS, j’ai cerné la plupart
+                de leurs spécificités respectives, leurs règles ainsi que leurs
+                possibilités. J’ai appris à détecter des bugs d’affichage en me
+                servant des dev tools, et à adapter l’affichage du site sur les
+                supports desktop, tablette et mobile. Une bonne introduction au
+                HTML/CSS ainsi qu'au responsive.
               </p>
-            </ProjectPreview>
-            <ProjectPreview
-              projectTitle='Sophie Bluel'
-              projectScreenshot='sophie-bluel.webp'
-              projectDeployment=''
+            </Project>
+            <Project
+              title='Sophie Bluel'
+              mainScreenshot='sophie-bluel.webp'
+              summary='Utilisation du Javascript pour rendre un site web dynamique'
+              responsiveIllustration='sophie-bluel-responsive.webp'
+              deployment=''
               githubLink='https://github.com/yoannBonge/ArchiWebos'
               reverseRow
-              brandsIcons={
+              toolsIcons={
                 <>
                   <FontAwesomeIcon icon={faJs} className='js-logo' />
                   <FontAwesomeIcon icon={faHtml5} className='html-logo' />
@@ -103,21 +115,28 @@ const Home = () => {
               }
             >
               <p>
-                (Projet réalisé dans le cadre de ma formation) <br /> <br /> La
-                page d'accueil du site portfolio d'une architecte (Sophie Bluel)
-                était fournie et statique. Il s'agissait de rendre le site
-                dynamique grâce au Javascript, en programmant un filtrage de la
-                galerie, la connexion au site et en créant une modale pour
-                l'ajout/suppression de photos. Un saut à pieds joints dans le
-                Javascript !
+                <span className='purple'>
+                  (Projet réalisé dans le cadre de ma formation)
+                </span>{" "}
+                <br /> <br /> La page d'accueil du site portfolio d'une
+                architecte (Sophie Bluel) était fournie et statique. Il
+                s'agissait de rendre le site dynamique grâce au Javascript. Une
+                API était fonctionnelle afin de permettre la connexion au site,
+                puis récupérer des projets contenant diverses informations grâce
+                auxquelles j’ai pu programmer un filtrage de la galerie de
+                photos et une modale pour ajouter/supprimer des projets. Un
+                projet assez fourni qui m’a fait découvrir pas mal de procédés.
+                Un saut à pieds joints dans le Javascript !
               </p>
-            </ProjectPreview>
-            <ProjectPreview
-              projectTitle='Nina Carducci'
-              projectScreenshot='nina-carducci.webp'
-              projectDeployment='https://yoannbonge.github.io/NinaCarducci/'
+            </Project>
+            <Project
+              title='Nina Carducci'
+              mainScreenshot='nina-carducci.webp'
+              summary="Optimisation du SEO d'un site web"
+              responsiveIllustration='nina-carducci-responsive.webp'
+              deployment='https://yoannbonge.github.io/NinaCarducci/'
               githubLink='https://github.com/yoannBonge/NinaCarducci'
-              brandsIcons={
+              toolsIcons={
                 <>
                   <img src='lighthouse-logo.webp' className='lighthouse-logo' />
                   <img src='wave-logo.webp' className='wave-logo' />
@@ -125,22 +144,29 @@ const Home = () => {
               }
             >
               <p>
-                (Projet réalisé dans le cadre de ma formation) <br /> <br /> Le
-                but de ce projet était d'optimiser le référencement et
-                l'accessibilité d'un site portfolio d'une photographe, Nina
-                Carducci. Quelques bugs étaient présents dans le code qu'il
-                fallait rectifier. Modification des balises HTML, traitement des
-                images, initiation aux outils d'audit de performances tels que
-                Lighthouse, d'accessibilité tels que Wave...
+                <span className='purple'>
+                  (Projet réalisé dans le cadre de ma formation)
+                </span>{" "}
+                <br /> <br /> Le but de ce projet était d'optimiser le
+                référencement et l'accessibilité d'un site portfolio d'une
+                photographe, Nina Carducci. Quelques bugs étaient présents dans
+                du code Jquery qu'il fallait rectifier. Modification des balises
+                HTML et de leur agencement, implémentation de données
+                structurées à l’aide du protocole Schema.org, traitement des
+                images afin de réduire leur poids, initiation aux outils d'audit
+                de performances tels que Lighthouse, d'accessibilité tels que
+                Wave…
               </p>
-            </ProjectPreview>
-            <ProjectPreview
-              projectTitle='Kasa'
-              projectScreenshot='kasa.webp'
-              projectDeployment=''
+            </Project>
+            <Project
+              title='Kasa'
+              mainScreenshot='kasa.webp'
+              summary="Développement d'une application web avec React"
+              responsiveIllustration='kasa-responsive.webp'
+              deployment=''
               githubLink='https://github.com/yoannBonge/Kasa'
               reverseRow
-              brandsIcons={
+              toolsIcons={
                 <>
                   <FontAwesomeIcon icon={faReact} className='react-logo' />
                   <FontAwesomeIcon icon={faSass} className='sass-logo' />
@@ -148,21 +174,27 @@ const Home = () => {
               }
             >
               <p>
-                (Projet réalisé dans le cadre de ma formation) <br /> <br /> Il
-                s'agissait de développer l'application d'une agence de location
-                de logements nommée Kasa, responsive, avec React. Toutes les
-                maquettes étaient fournies. Création de plusieurs composants
-                dont certains animés et interactifs, découverte du concept des
-                hooks. Grosse découverte de la librairie React ainsi que de Sass
-                !
+                <span className='purple'>
+                  (Projet réalisé dans le cadre de ma formation)
+                </span>{" "}
+                <br /> <br /> Il s'agissait de développer l'application
+                responsive d'une agence de location de logements nommée Kasa, le
+                tout grâce à la librairie React. Toutes les maquettes étaient
+                fournies. De la création de plusieurs composants dont certains
+                animés et interactifs (menu dropdown, carrousel) à la découverte
+                du concept des hooks en passant par celle de l’utilisation du
+                JSX, ou du langage Sass, ce projet a nécessité une montée en
+                compétences assez significative.
               </p>
-            </ProjectPreview>
-            <ProjectPreview
-              projectTitle='Mon Vieux Grimoire'
-              projectScreenshot='mon-vieux-grimoire.webp'
-              projectDeployment=''
+            </Project>
+            <Project
+              title='Mon Vieux Grimoire'
+              mainScreenshot='mon-vieux-grimoire.webp'
+              summary="Développement du back-end d'un site web"
+              responsiveIllustration='mon-vieux-grimoire-responsive.webp'
+              deployment=''
               githubLink='https://github.com/yoannBonge/MonVieuxGrimoire'
-              brandsIcons={
+              toolsIcons={
                 <>
                   <FontAwesomeIcon icon={faNodeJs} className='node-logo' />
                   <img src='mongodb-logo.webp' className='mongodb-logo' />
@@ -171,16 +203,19 @@ const Home = () => {
               }
             >
               <p>
-                (Projet réalisé dans le cadre de ma formation) <br /> <br /> Ce
-                projet était destiné à nous initier au backend avec la création
-                d'une API pour Mon "Vieux Grimoire", un site de notation de
-                livres. Une initiation aux opérations CRUD, avec diverses routes
-                à créer à partir d'une spécification d'API. Utilisation de
-                Node.js et son framework Express.js, base de données NoSQL
-                MongoDB, gestion de modèles Mongoose pour la création de livres
-                et d'utilisateurs...
+                <span className='purple'>
+                  (Projet réalisé dans le cadre de ma formation)
+                </span>{" "}
+                <br /> <br /> Ce projet était destiné à nous initier au backend
+                avec la création d'une API pour Mon "Vieux Grimoire", un site de
+                notation de livres. Une initiation aux opérations CRUD, à la
+                programmation de la création/connexion d’utilisateurs, avec
+                diverses routes à créer à partir d'une spécification d'API.
+                Utilisation de Node.js et son framework Express.js, base de
+                données NoSQL MongoDB, gestion de modèles Mongoose, sécurisation
+                de la base de données grâce au cryptage des mots de passe…
               </p>
-            </ProjectPreview>
+            </Project>
           </div>
         </section>
         <section id='my-skills'>
