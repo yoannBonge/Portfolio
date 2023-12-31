@@ -435,7 +435,11 @@
 }
 
 .link {
+  @include large-mobile {
+    font-size: 0.8em;
+  }
   color: white;
+  white-space: nowrap;
   text-decoration: none;
   background-color: $purple;
   font-size: 0.9em;
