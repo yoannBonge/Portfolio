@@ -1,6 +1,9 @@
 @import "/common.scss";
 
 .my-logo {
+  @include tablet {
+    margin: 1em 2em 1em 2em;
+  }
   @include large-mobile {
     height: 3em;
   }
@@ -9,9 +12,15 @@
 }
 
 .year-and-name {
+  @include mid-desktop {
+    gap: 3vw;
+  }
+  @include tablet {
+    font-size: 2vw;
+    gap: 3vw;
+  }
   @include large-mobile {
-    font-size: 1em;
-    gap: 1em;
+    gap: 2vw;
   }
   display: flex;
   gap: 3em;

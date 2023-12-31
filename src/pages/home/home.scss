@@ -5,7 +5,9 @@
     width: 70%;
   }
   @include tablet {
-    width: 80%;
+    width: 83%;
+    flex-direction: column;
+    text-align: center;
   }
   @include large-mobile {
     width: 83%;

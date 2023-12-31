@@ -15,6 +15,7 @@
     padding: 0.5em 1.5em;
   }
   height: 30vw;
+  width: auto;
   display: flex;
   gap: 2.5vw;
   padding: 1.5em;
@@ -113,24 +114,25 @@
     gap: 2.5vw;
   }
   display: flex;
+  height: 100%;
   width: 50%;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .title {
-  @include mid-desktop {
-    font-size: 2.8em;
-    margin-top: 0;
-  }
-  @include tablet {
-    font-size: 2.3em;
-  }
+  // @include mid-desktop {
+  //   font-size: 2.8em;
+  //   margin-top: 0;
+  // }
+  // @include tablet {
+  //   font-size: 2.3em;
+  // }
   @include large-mobile {
     display: none;
   }
-  font-size: 3em;
-  margin-top: -2em;
+  font-size: 3.5vw;
+  margin-top: -2vw;
   &.reverse {
     text-align: end;
   }
@@ -149,18 +151,12 @@
 }
 
 .summary {
-  @include mid-desktop {
-    font-size: 1.7em;
-  }
-  @include tablet {
-    font-size: 1.5em;
-  }
   @include large-mobile {
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
     margin-bottom: 0.5em;
   }
-  font-size: 2em;
+  font-size: 2.5vw;
   font-weight: 600;
   color: black;
   &.reverse {
@@ -182,140 +178,79 @@
   align-items: center;
   /////////////////////////////////////////////////
   .html-logo {
-    @include mid-desktop {
-      font-size: 5em;
-    }
-    @include tablet {
-      font-size: 4em;
-    }
     @include large-mobile {
-      font-size: 4em;
+      font-size: 15vw;
     }
     color: $html-color;
     @include tools-icons-dimensions;
+    font-size: 8vw;
   }
   /////////////////////////////////////////////////
   .css-logo {
-    @include mid-desktop {
-      font-size: 5em;
-    }
-    @include tablet {
-      font-size: 4em;
-    }
     @include large-mobile {
-      font-size: 4em;
+      font-size: 15vw;
     }
-    display: flex;
     color: $css-color;
     @include tools-icons-dimensions;
+    font-size: 8vw;
   }
   /////////////////////////////////////////////////
   .js-logo {
-    @include mid-desktop {
-      font-size: 5em;
-    }
-    @include tablet {
-      font-size: 4em;
-    }
     @include large-mobile {
-      font-size: 4em;
+      font-size: 15vw;
     }
     color: $js-color;
     @include tools-icons-dimensions;
+    font-size: 8vw;
   }
   /////////////////////////////////////////////////
   .lighthouse-logo {
-    @include mid-desktop {
-      width: 5em;
-    }
-    @include tablet {
-      width: 4em;
-    }
-    @include large-mobile {
-      width: 4em;
-    }
     @include lighthouse-logo-dimensions;
+    width: 35%;
   }
   /////////////////////////////////////////////////
   .wave-logo {
-    @include mid-desktop {
-      width: 5em;
-    }
-    @include tablet {
-      width: 4em;
-    }
-    @include large-mobile {
-      width: 4.2em;
-    }
     @include wave-logo-dimensions;
+    width: 35%;
   }
   /////////////////////////////////////////////////
   .react-logo {
-    @include mid-desktop {
-      font-size: 5em;
-    }
-    @include tablet {
-      font-size: 3.8em;
-    }
     @include large-mobile {
-      font-size: 4em;
+      font-size: 15vw;
     }
     color: $react-color;
     @include tools-icons-dimensions;
+    font-size: 8vw;
   }
   /////////////////////////////////////////////////
   .sass-logo {
-    @include mid-desktop {
-      font-size: 5em;
-    }
-    @include tablet {
-      font-size: 3.8em;
-    }
     @include large-mobile {
-      font-size: 4em;
+      font-size: 15vw;
     }
     color: $sass-color;
     @include tools-icons-dimensions;
+    font-size: 8vw;
   }
   /////////////////////////////////////////////////
   .node-logo {
-    @include mid-desktop {
-      font-size: 5em;
-    }
-    @include tablet {
-      font-size: 4em;
-    }
     @include large-mobile {
-      font-size: 3.5em;
+      font-size: 15vw;
     }
     color: $node-color;
     @include tools-icons-dimensions;
+    font-size: 8vw;
   }
   /////////////////////////////////////////////////
   .mongodb-logo {
-    @include mid-desktop {
-      width: 3em;
-    }
-    @include tablet {
-      width: 2em;
-    }
     @include large-mobile {
-      width: 1.8em;
+      width: 13%;
     }
     @include mongodb-logo-dimensions;
+    width: 15%;
   }
   /////////////////////////////////////////////////
   .express-logo {
-    @include mid-desktop {
-      width: 8em;
-    }
-    @include tablet {
-      width: 6em;
-    }
-    @include large-mobile {
-      width: 6em;
-    }
-    @include express-logo-dimensions;
+    width: 40%;
   }
 }
 

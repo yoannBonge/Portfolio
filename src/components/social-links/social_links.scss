@@ -1,17 +1,19 @@
 @import "/common.scss";
 
 .social-links {
+  @include mid-desktop {
+    margin: 3vw;
+  }
   @include large-mobile {
     width: 7.5em;
-    margin: 0;
   }
   display: flex;
   justify-content: center;
   width: 10em;
-  margin: 1.5em;
+  margin: 2em;
   ul {
-    @include large-mobile {
-      gap: 1em;
+    @include mid-desktop {
+      gap: 3vw;
     }
     display: flex;
     padding: 0;
@@ -20,8 +22,8 @@
     li {
       list-style: none;
       a {
-        @include mid-desktop {
-          font-size: 3.5vw;
+        @include tablet {
+          font-size: 4vw;
         }
         @include large-mobile {
           font-size: 5vw;
