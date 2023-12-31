@@ -1,10 +1,10 @@
 ////////////////////////////////VARIABLES & MIXINS
 
-////////FONTS
+///////////////////FONTS
 $main-font: "Readex Pro", sans-serif;
 $quote-font: "Marcellus", serif;
 
-////////COLORS
+///////////////////COLORS
 $purple: #69648d;
 $html-color: #e44d26;
 $css-color: #2d53e5;
@@ -18,24 +18,54 @@ $mongodb-color: #419a45;
 $express-color: #f7e01d;
 $openclassrooms-color: #7451eb;
 
-////////LOGOS SIZES
+///////////////////LOGOS SIZES
 @mixin tools-icons-dimensions {
   font-size: 7em;
-  margin: 0.3em;
+  margin: 2.2vw;
 }
 @mixin lighthouse-logo-dimensions {
   width: 8em;
-  margin: 2em;
+  margin: 2vw;
 }
 @mixin wave-logo-dimensions {
   width: 8em;
-  margin: 2em;
+  margin: 2vw;
 }
 @mixin mongodb-logo-dimensions {
   width: 4em;
-  margin: 2em;
+  margin: 2.2vw;
 }
 @mixin express-logo-dimensions {
   width: 12em;
-  margin: 2em;
+  margin: 2vw;
+}
+
+///////////////////BREAKPOINTS
+$mid-desktop: 1025px;
+$tablet: 769px;
+$large-mobile: 426px;
+$small-mobile: 321px;
+
+@mixin mid-desktop {
+  @media (max-width: $mid-desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin large-mobile {
+  @media (max-width: $large-mobile) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media (max-width: $small-mobile) {
+    @content;
+  }
 }

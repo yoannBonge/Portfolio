@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSquareXTwitter,
-  faSquareGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import SocialLinks from "../social-links/SocialLinks";
 import "./header.scss";
 
 const Header = () => {
@@ -59,40 +54,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <nav className='social-links'>
-        <ul>
-          <li>
-            <a
-              href='https://github.com/yoannBonge'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Compte Github de Yoann Bonge'
-            >
-              <FontAwesomeIcon icon={faSquareGithub} />
-            </a>
-          </li>
-          <li>
-            <a
-              href='https://twitter.com/Yoann_Bonge'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Compte X (anciennement Twitter) de Yoann Bonge'
-            >
-              <FontAwesomeIcon icon={faSquareXTwitter} />
-            </a>
-          </li>
-          <li>
-            <a
-              href='https://www.linkedin.com/in/yoann-bonge-87bb7a2a5/'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Compte LinkedIn de Yoann Bonge'
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <SocialLinks isHeader />
     </header>
   );
 };

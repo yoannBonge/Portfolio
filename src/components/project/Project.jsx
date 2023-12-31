@@ -39,11 +39,13 @@ const Project = ({
         </div>
       </div>
 
-      <div className='presentation'>
-        <h3 className={`title ${toLeftOrRight}`}>{title}</h3>
-        <div className={`summary ${toLeftOrRight}`}>{summary}</div>
+      <div className={`presentation-and-tools ${toLeftOrRight}`}>
+        <div className='presentation'>
+          <h3 className={`title ${toLeftOrRight}`}>{title}</h3>
+          <div className={`summary ${toLeftOrRight}`}>{summary}</div>
+        </div>
+        <div className='tools'>{toolsIcons}</div>
       </div>
-      <div className='tools'>{toolsIcons}</div>
 
       <Modal
         isOpen={isModalOpen}

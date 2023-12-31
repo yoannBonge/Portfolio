@@ -1,16 +1,31 @@
 @import "/common.scss";
 
-.main-content {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
 .my-logo {
-  height: 7em;
+  @include large-mobile {
+    height: 3em;
+  }
+  height: 5em;
+  margin: 1em;
+}
+
+.year-and-name {
+  @include large-mobile {
+    font-size: 1em;
+    gap: 1em;
+  }
+  display: flex;
+  gap: 3em;
 }
 .current-year {
+  @include large-mobile {
+    font-size: 1em;
+  }
   font-size: 2em;
 }
 .firstname-lastname {
+  @include large-mobile {
+    font-size: 1em;
+  }
   font-size: 2em;
+  white-space: nowrap;
 }

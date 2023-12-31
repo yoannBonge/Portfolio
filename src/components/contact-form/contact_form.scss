@@ -5,6 +5,9 @@
   text-align: center;
 }
 .introduction {
+  @include large-mobile {
+    font-size: 1.2em;
+  }
   font-size: 1.8em;
   margin: 2em 2em 1em 2em;
 }

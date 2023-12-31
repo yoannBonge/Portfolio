@@ -19,7 +19,7 @@ const Home = () => {
       <Header />
       <main>
         <section id='presentation'>
-          <h1>Yoann Bonge, Développeur Web junior</h1>
+          <h1>Yoann Bonge - Développeur Web junior</h1>
           <div className='about'>
             <div className='headline'>
               <img

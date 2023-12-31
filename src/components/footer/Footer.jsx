@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import "./footer.scss";
+import SocialLinks from "../social-links/SocialLinks";
 
 const Footer = () => {
   //////////////////////////////////////////////////////////////////////STATE
@@ -14,15 +15,16 @@ const Footer = () => {
   //////////////////////////////////////////////////////////////////////RENDER
   return (
     <footer>
-      <div className='main-content'>
-        <img
-          className='my-logo'
-          src='my-logo.webp'
-          alt='Logo du site de Yoann Bonge'
-        />
-        <span className='current-year'></span>
+      <img
+        className='my-logo'
+        src='my-logo.webp'
+        alt='Logo du site de Yoann Bonge'
+      />
+      <div className='year-and-name'>
+        <span className='current-year' ref={currentYearRef}></span>
         <span className='firstname-lastname'>Yoann Bonge</span>
       </div>
+      <SocialLinks />
     </footer>
   );
 };

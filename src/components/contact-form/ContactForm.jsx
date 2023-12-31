@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./contact_form.scss";
 
@@ -14,6 +14,7 @@ const ContactForm = () => {
 
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const formRef = useRef(null);
   //////////////////////////////////////////////////////////////////////BEHAVIOR
   const onSubmit = (data) => {
     setIsSendingEmail(true);
@@ -45,6 +46,19 @@ const ContactForm = () => {
         setIsSendingEmail(false);
       });
   };
+
+  const handleOutsideClick = (event) => {
+    if (formRef.current && !formRef.current.contains(event.target)) {
+      reset();
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [handleOutsideClick]);
   //////////////////////////////////////////////////////////////////////RENDER
   return (
     <>
@@ -55,7 +69,7 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
         {/* NAME */}
         <label htmlFor='name'>Nom</label>
         <input

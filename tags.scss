@@ -5,21 +5,32 @@ body {
   background-repeat: repeat;
   font-family: $main-font;
   color: white;
-  margin: 9em 0 0 0;
+  margin: 9em auto 0 auto;
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 section {
+  @include large-mobile {
+    margin-bottom: 3em;
+  }
   margin-bottom: 6em;
 }
 h1 {
+  @include mid-desktop {
+    font-size: 3em;
+  }
   font-size: 4em;
   text-align: center;
 }
 h2 {
+  @include large-mobile {
+    font-size: 2.5em;
+  }
   font-size: 3.5em;
   text-align: center;
 }
@@ -36,6 +47,10 @@ a {
   cursor: pointer;
 }
 blockquote {
+  @include large-mobile {
+    font-size: 2em;
+    margin-top: 1em;
+  }
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -56,6 +71,9 @@ form {
   border-radius: 5px;
 }
 label {
+  @include large-mobile {
+    margin-bottom: -0.8em;
+  }
   color: black;
   margin-bottom: -0.5em;
 }
@@ -69,6 +87,9 @@ input {
   }
 }
 textarea {
+  @include large-mobile {
+    height: 7em;
+  }
   border: none;
   resize: none;
   border-radius: 8px;
@@ -103,8 +124,12 @@ button {
   }
 }
 footer {
+  @include large-mobile {
+    // justify-content: space-around;
+  }
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   background-color: black;
   box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }

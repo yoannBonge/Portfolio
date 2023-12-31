@@ -1,6 +1,18 @@
 @import "/common.scss";
 
 .about {
+  @include mid-desktop {
+    width: 70%;
+  }
+  @include tablet {
+    width: 80%;
+  }
+  @include large-mobile {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+  @include small-mobile {
+  }
   display: flex;
   margin: 3em auto 0 auto;
   padding: 2em;
@@ -16,6 +28,12 @@
 }
 
 .headline {
+  @include tablet {
+    gap: 3em;
+  }
+  @include large-mobile {
+    gap: 2em;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +44,9 @@
   width: 10em;
 }
 .about-me-title {
+  @include tablet {
+    font-size: 2.5em;
+  }
   font-size: 2em;
   font-weight: 600;
   line-height: 1em;
@@ -34,6 +55,9 @@
   padding: 0;
 }
 .presentation-text {
+  @include large-mobile {
+    font-size: 1em;
+  }
   font-size: 1.3em;
 }
 .openclassrooms {
@@ -48,8 +72,14 @@
 }
 
 #my-projects {
+  @include large-mobile {
+    padding: 0 1em;
+  }
   padding: 0 2em;
   .projects-items {
+    @include large-mobile {
+      gap: 3em;
+    }
     display: grid;
     gap: 6em;
   }
@@ -60,42 +90,76 @@
   .skills-container {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-image: url("background-light.webp");
     box-shadow: 0px 0px 4px rgb(255, 255, 255);
-    gap: 0.5em;
     .html-logo {
+      @include large-mobile {
+        font-size: 3em;
+      }
       color: $html-color;
       @include tools-icons-dimensions;
     }
     .css-logo {
+      @include large-mobile {
+        font-size: 3em;
+      }
       color: $css-color;
       @include tools-icons-dimensions;
     }
     .js-logo {
+      @include large-mobile {
+        font-size: 3em;
+      }
       color: $js-color;
       @include tools-icons-dimensions;
     }
     .sass-logo {
+      @include large-mobile {
+        font-size: 3em;
+      }
       color: $sass-color;
       @include tools-icons-dimensions;
     }
     .react-logo {
+      @include large-mobile {
+        font-size: 3em;
+      }
       color: $react-color;
       @include tools-icons-dimensions;
     }
     .node-logo {
+      @include large-mobile {
+        font-size: 3em;
+      }
       color: $node-color;
       @include tools-icons-dimensions;
     }
     .mongodb-logo {
+      @include large-mobile {
+        width: 1.6em;
+      }
       @include mongodb-logo-dimensions;
     }
     .express-logo {
+      @include large-mobile {
+        width: 4em;
+      }
       @include express-logo-dimensions;
     }
   }
 }
 
 #contact {
+  @include mid-desktop {
+    width: 50%;
+  }
+  @include tablet {
+    width: 60%;
+  }
+  @include large-mobile {
+    width: 90%;
+  }
   width: 40%;
 }

@@ -19,16 +19,44 @@
 }
 
 .logo {
-  height: 6.5em;
+  @include mid-desktop {
+    margin: 0 13vw 0 1.5em;
+  }
+  display: flex;
+  width: 3.5em;
+  margin: 0 8.3em 0 1.5em;
 }
 
 .menu {
+  @include mid-desktop {
+    margin-left: -9.5vw;
+  }
+  @include tablet {
+    margin-left: -8vw;
+  }
   ul {
+    @include mid-desktop {
+      gap: 7vw;
+    }
+    @include large-mobile {
+      margin-right: 2em;
+    }
     display: flex;
-    gap: 4em;
+    padding: 0;
+    gap: 8vw;
     li {
       list-style: none;
+      white-space: nowrap;
       a {
+        @include mid-desktop {
+          font-size: 2.8vw;
+        }
+        @include tablet {
+          font-size: 3vw;
+        }
+        @include large-mobile {
+          font-size: 4.3vw;
+        }
         font-size: 1.8em;
         font-weight: 500;
         background-image: -webkit-linear-gradient(
@@ -62,13 +90,27 @@
 }
 
 .social-links {
-  margin: 2em;
+  @include large-mobile {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
+  width: 10em;
+  margin: 1.5em;
   ul {
     display: flex;
-    gap: 1.8em;
+    padding: 0;
+    margin: 0;
+    gap: 2em;
     li {
       list-style: none;
       a {
+        @include mid-desktop {
+          font-size: 3.5vw;
+        }
+        @include large-mobile {
+          font-size: 5vw;
+        }
         font-size: 2em;
         color: $purple;
         transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
