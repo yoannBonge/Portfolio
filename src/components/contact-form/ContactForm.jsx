@@ -76,6 +76,7 @@ const ContactForm = () => {
           {...register("name", {
             required: "Veuillez renseigner le champ ci-dessus",
           })}
+          id='name'
           className={errors.name ? "error-style" : ""}
         />
         {errors.name && (
@@ -91,6 +92,7 @@ const ContactForm = () => {
               message: "Adresse email invalide",
             },
           })}
+          id='email'
           className={errors.email ? "error-style" : ""}
         />
         {errors.email && (
@@ -102,6 +104,7 @@ const ContactForm = () => {
           {...register("message", {
             required: "Veuillez renseigner le champ ci-dessus",
           })}
+          id='message'
           rows='4'
           className={errors.message ? "error-style" : ""}
         />

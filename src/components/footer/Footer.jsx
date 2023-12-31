@@ -19,6 +19,7 @@ const Footer = () => {
         className='my-logo'
         src='my-logo.webp'
         alt='Logo du site de Yoann Bonge'
+        loading='lazy'
       />
       <div className='year-and-name'>
         <span className='current-year' ref={currentYearRef}></span>

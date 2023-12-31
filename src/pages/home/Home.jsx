@@ -168,12 +168,14 @@ const Home = () => {
                     className='lighthouse-logo'
                     alt='Logo de Google Lighthouse'
                     title='Google Lighthouse'
+                    loading='lazy'
                   />
                   <img
                     src='wave-logo.webp'
                     className='wave-logo'
                     alt='Logo de Wave'
                     title='Wave'
+                    loading='lazy'
                   />
                 </>
               }
@@ -249,12 +251,14 @@ const Home = () => {
                     className='mongodb-logo'
                     alt='Logo de MongoDB'
                     title='MongoDB'
+                    loading='lazy'
                   />
                   <img
                     src='express-logo.webp'
                     className='express-logo'
                     alt="Logo d'Express.js"
                     title='Express.js'
+                    loading='lazy'
                   />
                 </>
               }
@@ -309,12 +313,14 @@ const Home = () => {
               className='mongodb-logo'
               alt='Logo de MongoDB'
               title='MongoDB'
+              loading='lazy'
             />
             <img
               src='express-logo.webp'
               className='express-logo'
               alt="Logo d'Express.js"
               title='Express.js'
+              loading='lazy'
             />
           </div>
         </section>

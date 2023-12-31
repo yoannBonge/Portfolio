@@ -35,6 +35,7 @@ const Project = ({
             className={`picture ${toLeftOrRight}`}
             src={mainScreenshot}
             alt={`Screenshot du site ${title}`}
+            loading='lazy'
           />
           <span className='overlay-text'>Voir plus</span>
         </div>
@@ -62,6 +63,7 @@ const Project = ({
               className='responsive-illustration'
               src={responsiveIllustration}
               alt={`Illustration du site ${title} s'affichant sur différents supports`}
+              loading='lazy'
             />
             <div className='details'>{children}</div>
           </div>

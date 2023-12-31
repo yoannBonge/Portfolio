@@ -27,6 +27,7 @@ const Header = () => {
         className='logo'
         src='my-logo.webp'
         alt='logo du site de Yoann Bonge'
+        loading='lazy'
       />
       <nav className='menu'>
         <ul>
