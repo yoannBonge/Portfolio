@@ -16,12 +16,14 @@
   display: flex;
   gap: 3em;
 }
+
 .current-year {
   @include large-mobile {
     font-size: 1em;
   }
   font-size: 2em;
 }
+
 .firstname-lastname {
   @include large-mobile {
     font-size: 1em;

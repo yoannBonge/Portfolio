@@ -6,9 +6,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./social_links.scss";
 
-const SocialLinks = ({ isHeader }) => {
+const SocialLinks = ({ inHeader }) => {
   return (
-    <nav className={`social-links ${isHeader ? "header-social-links" : ""}`}>
+    <nav className={`social-links ${inHeader ? "header-social-links" : ""}`}>
       <ul>
         <li>
           <a

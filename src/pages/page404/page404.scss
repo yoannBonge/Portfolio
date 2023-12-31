@@ -1,10 +1,22 @@
 @import "/common.scss";
 
 .big404 {
+  @include large-mobile {
+    font-size: 12em;
+  }
+  @include small-mobile {
+    font-size: 9em;
+  }
   font-size: 15em;
 }
 
 .description {
+  @include large-mobile {
+    font-size: 1.2em;
+  }
+  @include small-mobile {
+    font-size: 15px;
+  }
   font-size: 2em;
   margin-bottom: 2em;
 }

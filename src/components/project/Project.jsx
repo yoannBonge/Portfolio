@@ -28,6 +28,7 @@ const Project = ({
   //////////////////////////////////////////////////////////////////////RENDER
   return (
     <div className={`project-container ${toLeftOrRight}`}>
+      <h3 className='title-mobile'>{title}</h3>
       <div className='see-more' onClick={openModal}>
         <div className='screenshot-container'>
           <img

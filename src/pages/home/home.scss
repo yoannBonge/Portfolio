@@ -8,10 +8,10 @@
     width: 80%;
   }
   @include large-mobile {
+    width: 83%;
     flex-direction: column;
-    border-radius: 20px;
-  }
-  @include small-mobile {
+    border-radius: 0;
+    text-align: center;
   }
   display: flex;
   margin: 3em auto 0 auto;
@@ -51,8 +51,6 @@
   font-weight: 600;
   line-height: 1em;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 .presentation-text {
   @include large-mobile {
@@ -76,6 +74,7 @@
     padding: 0 1em;
   }
   padding: 0 2em;
+
   .projects-items {
     @include large-mobile {
       gap: 3em;
@@ -94,6 +93,7 @@
     flex-wrap: wrap;
     background-image: url("background-light.webp");
     box-shadow: 0px 0px 4px rgb(255, 255, 255);
+    /////////////////////////////////////////////////
     .html-logo {
       @include large-mobile {
         font-size: 3em;
@@ -101,6 +101,7 @@
       color: $html-color;
       @include tools-icons-dimensions;
     }
+    /////////////////////////////////////////////////
     .css-logo {
       @include large-mobile {
         font-size: 3em;
@@ -108,6 +109,7 @@
       color: $css-color;
       @include tools-icons-dimensions;
     }
+    /////////////////////////////////////////////////
     .js-logo {
       @include large-mobile {
         font-size: 3em;
@@ -115,6 +117,7 @@
       color: $js-color;
       @include tools-icons-dimensions;
     }
+    /////////////////////////////////////////////////
     .sass-logo {
       @include large-mobile {
         font-size: 3em;
@@ -122,6 +125,7 @@
       color: $sass-color;
       @include tools-icons-dimensions;
     }
+    /////////////////////////////////////////////////
     .react-logo {
       @include large-mobile {
         font-size: 3em;
@@ -129,6 +133,7 @@
       color: $react-color;
       @include tools-icons-dimensions;
     }
+    /////////////////////////////////////////////////
     .node-logo {
       @include large-mobile {
         font-size: 3em;
@@ -136,12 +141,14 @@
       color: $node-color;
       @include tools-icons-dimensions;
     }
+    /////////////////////////////////////////////////
     .mongodb-logo {
       @include large-mobile {
         width: 1.6em;
       }
       @include mongodb-logo-dimensions;
     }
+    /////////////////////////////////////////////////
     .express-logo {
       @include large-mobile {
         width: 4em;

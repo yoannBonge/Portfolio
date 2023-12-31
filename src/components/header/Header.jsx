@@ -54,7 +54,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <SocialLinks isHeader />
+      <SocialLinks inHeader />
     </header>
   );
 };

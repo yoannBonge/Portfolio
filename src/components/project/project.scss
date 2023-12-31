@@ -8,11 +8,11 @@
     height: 37.5vw;
   }
   @include large-mobile {
-    height: 32vw;
-    gap: 3vw;
-  }
-  @include small-mobile {
-    height: 40vw;
+    flex-direction: column;
+    width: 80vw;
+    height: auto;
+    gap: 1em;
+    padding: 0.5em 1.5em;
   }
   height: 30vw;
   display: flex;
@@ -22,9 +22,13 @@
   border-radius: 10px;
   background-image: url("background-light.webp");
   &.reverse {
+    @include large-mobile {
+      flex-direction: column;
+    }
     flex-direction: row-reverse;
   }
 }
+
 .see-more {
   color: white;
   cursor: pointer;
@@ -50,6 +54,8 @@
   @include large-mobile {
     border-radius: 5px;
     box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 1);
+    width: 100%;
+    height: auto;
   }
   @include tablet {
     box-shadow: 10px 10px 17px -10px rgba(0, 0, 0, 1);
@@ -72,7 +78,11 @@
 }
 
 .overlay-text {
+  @include large-mobile {
+    font-size: 2em;
+  }
   font-size: 2.5em;
+  white-space: nowrap;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -117,13 +127,25 @@
     font-size: 2.3em;
   }
   @include large-mobile {
-    font-size: 1.3em;
+    display: none;
   }
   font-size: 3em;
   margin-top: -2em;
   &.reverse {
     text-align: end;
   }
+}
+
+.title-mobile {
+  @include large-mobile {
+    display: flex;
+    align-self: center;
+    font-size: 1.8em;
+  }
+  @include small-mobile {
+    font-size: 1.5em;
+  }
+  display: none;
 }
 
 .summary {
@@ -134,12 +156,17 @@
     font-size: 1.5em;
   }
   @include large-mobile {
-    font-size: 0.9em;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 0.5em;
   }
   font-size: 2em;
   font-weight: 600;
   color: black;
   &.reverse {
+    @include large-mobile {
+      text-align: center;
+    }
     text-align: end;
   }
 }
@@ -153,6 +180,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  /////////////////////////////////////////////////
   .html-logo {
     @include mid-desktop {
       font-size: 5em;
@@ -161,12 +189,12 @@
       font-size: 4em;
     }
     @include large-mobile {
-      font-size: 3em;
+      font-size: 4em;
     }
     color: $html-color;
     @include tools-icons-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .css-logo {
     @include mid-desktop {
       font-size: 5em;
@@ -175,13 +203,13 @@
       font-size: 4em;
     }
     @include large-mobile {
-      font-size: 3em;
+      font-size: 4em;
     }
     display: flex;
     color: $css-color;
     @include tools-icons-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .js-logo {
     @include mid-desktop {
       font-size: 5em;
@@ -190,12 +218,12 @@
       font-size: 4em;
     }
     @include large-mobile {
-      font-size: 3em;
+      font-size: 4em;
     }
     color: $js-color;
     @include tools-icons-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .lighthouse-logo {
     @include mid-desktop {
       width: 5em;
@@ -204,11 +232,11 @@
       width: 4em;
     }
     @include large-mobile {
-      width: 2.4em;
+      width: 4em;
     }
     @include lighthouse-logo-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .wave-logo {
     @include mid-desktop {
       width: 5em;
@@ -217,11 +245,11 @@
       width: 4em;
     }
     @include large-mobile {
-      width: 2.4em;
+      width: 4.2em;
     }
     @include wave-logo-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .react-logo {
     @include mid-desktop {
       font-size: 5em;
@@ -230,12 +258,12 @@
       font-size: 3.8em;
     }
     @include large-mobile {
-      font-size: 2.4em;
+      font-size: 4em;
     }
     color: $react-color;
     @include tools-icons-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .sass-logo {
     @include mid-desktop {
       font-size: 5em;
@@ -244,12 +272,12 @@
       font-size: 3.8em;
     }
     @include large-mobile {
-      font-size: 2.4em;
+      font-size: 4em;
     }
     color: $sass-color;
     @include tools-icons-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .node-logo {
     @include mid-desktop {
       font-size: 5em;
@@ -258,12 +286,12 @@
       font-size: 4em;
     }
     @include large-mobile {
-      font-size: 2.3em;
+      font-size: 3.5em;
     }
     color: $node-color;
     @include tools-icons-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .mongodb-logo {
     @include mid-desktop {
       width: 3em;
@@ -272,11 +300,11 @@
       width: 2em;
     }
     @include large-mobile {
-      width: 1em;
+      width: 1.8em;
     }
     @include mongodb-logo-dimensions;
   }
-
+  /////////////////////////////////////////////////
   .express-logo {
     @include mid-desktop {
       width: 8em;
@@ -285,7 +313,7 @@
       width: 6em;
     }
     @include large-mobile {
-      width: 3.2em;
+      width: 6em;
     }
     @include express-logo-dimensions;
   }
@@ -300,6 +328,7 @@
   background-color: rgb(105, 100, 141, 0.8);
   z-index: 100;
 }
+
 .modal {
   @include large-mobile {
     width: 75vw;
@@ -319,10 +348,10 @@
   width: 70vw;
   height: 75vh;
 }
+
 .modal-content {
   @include tablet {
     overflow-y: auto;
-    // align-items: center;
   }
   padding: 2em;
   .fa-solid {
@@ -337,6 +366,7 @@
     cursor: pointer;
   }
 }
+
 .image-and-details {
   @include tablet {
     flex-direction: column;
@@ -344,6 +374,7 @@
   }
   display: flex;
 }
+
 .responsive-illustration {
   @include mid-desktop {
     height: 13.1em;
@@ -360,6 +391,7 @@
   }
   height: 24em;
 }
+
 .details {
   @include mid-desktop {
     font-size: 1em;
@@ -393,6 +425,7 @@
   position: absolute;
   top: 83%;
 }
+
 .link-wrapper {
   margin-top: 1.5em;
   transition: transform 0.1s ease-in-out;
@@ -400,6 +433,7 @@
     transform: scale(1.06);
   }
 }
+
 .link {
   color: white;
   text-decoration: none;

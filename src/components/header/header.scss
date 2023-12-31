@@ -20,7 +20,11 @@
 
 .logo {
   @include mid-desktop {
-    margin: 0 13vw 0 1.5em;
+    margin: 0 14vw 0 1.5em;
+  }
+  @include small-mobile {
+    margin: 0 14vw 0 1.3em;
+    width: 3em;
   }
   display: flex;
   width: 3.5em;
@@ -34,6 +38,7 @@
   @include tablet {
     margin-left: -8vw;
   }
+
   ul {
     @include mid-desktop {
       gap: 7vw;
@@ -44,9 +49,11 @@
     display: flex;
     padding: 0;
     gap: 8vw;
+
     li {
       list-style: none;
       white-space: nowrap;
+
       a {
         @include mid-desktop {
           font-size: 2.8vw;
@@ -84,39 +91,6 @@
         background-position: left center;
         color: #3f19ff;
         transition: background-position 250ms ease-out;
-      }
-    }
-  }
-}
-
-.social-links {
-  @include large-mobile {
-    display: none;
-  }
-  display: flex;
-  justify-content: center;
-  width: 10em;
-  margin: 1.5em;
-  ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 2em;
-    li {
-      list-style: none;
-      a {
-        @include mid-desktop {
-          font-size: 3.5vw;
-        }
-        @include large-mobile {
-          font-size: 5vw;
-        }
-        font-size: 2em;
-        color: $purple;
-        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-      }
-      a:hover {
-        color: white;
       }
     }
   }

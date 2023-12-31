@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
-import "./footer.scss";
 import SocialLinks from "../social-links/SocialLinks";
+import "./footer.scss";
 
 const Footer = () => {
   //////////////////////////////////////////////////////////////////////STATE

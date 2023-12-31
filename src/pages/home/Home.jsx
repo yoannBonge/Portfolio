@@ -44,9 +44,9 @@ const Home = () => {
                 OpenClassrooms
               </a>
               , j'ai pu acquérir de nombreuses compétences que je souhaite
-              désormais exploiter en créant des{" "}
+              désormais exploiter en créant des
               <strong> sites et applications web </strong>. Découvrir,
-              apprendre, maîtriser, créer, partager, tels sont mes objectifs.{" "}
+              apprendre, maîtriser, créer, partager, tels sont mes objectifs.
               <br />
               Je vous invite à jeter un oeil aux projets que j'ai pu réaliser
               dans le cadre de ma formation de Développeur Web chez
@@ -99,7 +99,7 @@ const Home = () => {
               <p>
                 <span className='purple'>
                   (Projet réalisé dans le cadre de ma formation)
-                </span>{" "}
+                </span>
                 <br /> <br /> La mission était d'intégrer en HTML/CSS la page
                 d'accueil du site Booki, une agence de voyage. Toutes les
                 maquettes étaient fournies en versions desktop, tablette et
@@ -142,7 +142,7 @@ const Home = () => {
               <p>
                 <span className='purple'>
                   (Projet réalisé dans le cadre de ma formation)
-                </span>{" "}
+                </span>
                 <br /> <br /> La page d'accueil du site portfolio d'une
                 architecte (Sophie Bluel) était fournie et statique. Il
                 s'agissait de rendre le site dynamique grâce au Javascript. Une
@@ -181,7 +181,7 @@ const Home = () => {
               <p>
                 <span className='purple'>
                   (Projet réalisé dans le cadre de ma formation)
-                </span>{" "}
+                </span>
                 <br /> <br /> Le but de ce projet était d'optimiser le
                 référencement et l'accessibilité d'un site portfolio d'une
                 photographe, Nina Carducci. Quelques bugs étaient présents dans
@@ -219,7 +219,7 @@ const Home = () => {
               <p>
                 <span className='purple'>
                   (Projet réalisé dans le cadre de ma formation)
-                </span>{" "}
+                </span>
                 <br /> <br /> Il s'agissait de développer l'application
                 responsive d'une agence de location de logements nommée Kasa, le
                 tout grâce à la librairie React. Toutes les maquettes étaient
