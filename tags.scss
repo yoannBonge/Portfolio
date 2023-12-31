@@ -1,7 +1,7 @@
 @import "common.scss";
 
 body {
-  background-image: url("background-purple.webp");
+  background-image: url($texture-purple);
   background-repeat: repeat;
   font-family: $main-font;
   color: white;
@@ -65,7 +65,7 @@ blockquote {
   margin: 2.5em auto 0 auto;
 }
 form {
-  background-image: url("background-light.webp");
+  background-image: url($texture-gray);
   display: flex;
   flex-direction: column;
   gap: 1.5em;
@@ -106,7 +106,7 @@ button {
   color: white;
   font-size: 1em;
   font-weight: 600;
-  background-image: url("background-purple.webp");
+  background-image: url($texture-purple);
   width: 7em;
   height: 3em;
   border: none;
