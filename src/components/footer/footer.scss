@@ -1,14 +1,20 @@
 @import "/common.scss";
+.footer {
+  height: 5.2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
 
 .my-logo {
-  @include tablet {
-    margin: 1em 2em 1em 2em;
+  @include small-mobile {
+    margin-left: 1em;
   }
-  @include large-mobile {
-    height: 3em;
-  }
-  height: 5em;
-  margin: 1em;
+  height: 4em;
+  margin: 0.7em 1.3em;
 }
 
 .year-and-name {
@@ -20,10 +26,17 @@
     gap: 3vw;
   }
   @include large-mobile {
+    font-size: 4vw;
     gap: 2vw;
   }
+  @include small-mobile {
+    font-size: 4.5vw;
+  }
   display: flex;
-  gap: 3em;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  gap: 2em;
 }
 
 .current-year {

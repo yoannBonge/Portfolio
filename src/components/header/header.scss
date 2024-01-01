@@ -20,11 +20,14 @@
 
 .logo {
   @include mid-desktop {
-    margin: 0 14vw 0 1.5em;
+    margin-right: 14vw;
+  }
+  @include tablet {
+    width: 3em;
   }
   @include small-mobile {
-    margin: 0 14vw 0 1.3em;
-    width: 3em;
+    margin-left: 1.2em;
+    margin-right: 10vw;
   }
   display: flex;
   width: 3.5em;
@@ -33,15 +36,12 @@
 
 .menu {
   @include mid-desktop {
-    margin-left: -9.5vw;
-  }
-  @include tablet {
-    margin-left: -8vw;
+    margin-left: -4vw;
   }
 
   ul {
     @include mid-desktop {
-      gap: 7vw;
+      gap: 5vw;
     }
     @include large-mobile {
       margin-right: 2em;
@@ -56,13 +56,13 @@
 
       a {
         @include mid-desktop {
-          font-size: 2.8vw;
-        }
-        @include tablet {
           font-size: 3vw;
         }
         @include large-mobile {
           font-size: 4.3vw;
+        }
+        @include small-mobile {
+          font-size: 4.5vw;
         }
         font-size: 1.8em;
         font-weight: 500;

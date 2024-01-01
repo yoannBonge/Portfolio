@@ -14,7 +14,7 @@ const Footer = () => {
   }, []);
   //////////////////////////////////////////////////////////////////////RENDER
   return (
-    <footer>
+    <footer className='footer'>
       <img
         className='my-logo'
         src='my-logo.webp'

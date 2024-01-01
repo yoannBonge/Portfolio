@@ -205,11 +205,17 @@
   }
   /////////////////////////////////////////////////
   .lighthouse-logo {
+    @include large-mobile {
+      width: 23%;
+    }
     @include lighthouse-logo-dimensions;
     width: 35%;
   }
   /////////////////////////////////////////////////
   .wave-logo {
+    @include large-mobile {
+      width: 23%;
+    }
     @include wave-logo-dimensions;
     width: 35%;
   }

@@ -55,7 +55,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <SocialLinks inHeader />
+      <SocialLinks hideInMobile />
     </header>
   );
 };
