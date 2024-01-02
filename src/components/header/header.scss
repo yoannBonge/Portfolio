@@ -22,9 +22,6 @@
   @include mid-desktop {
     margin-right: 14vw;
   }
-  @include tablet {
-    width: 3em;
-  }
   @include small-mobile {
     margin-left: 1.2em;
     margin-right: 10vw;
@@ -37,6 +34,9 @@
 .menu {
   @include mid-desktop {
     margin-left: -4vw;
+  }
+  @include large-mobile {
+    margin-right: 6vw;
   }
 
   ul {
