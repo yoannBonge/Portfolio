@@ -22,9 +22,12 @@
   @include mid-desktop {
     margin-right: 14vw;
   }
+  @include large-mobile {
+    margin-right: 12vw;
+  }
   @include small-mobile {
     margin-left: 1.2em;
-    margin-right: 10vw;
+    margin-right: 8vw;
   }
   display: flex;
   width: 3.5em;

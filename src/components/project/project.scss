@@ -101,10 +101,10 @@
   display: flex;
   gap: 2.5vw;
   &.reverse {
-    flex-direction: row-reverse;
     @include mid-desktop {
       flex-direction: column;
     }
+    flex-direction: row-reverse;
   }
 }
 

@@ -11,13 +11,10 @@
   }
   @include large-mobile {
     width: 100%;
-
+    padding: 2em 0;
     flex-direction: column;
     border-radius: 0;
     text-align: center;
-  }
-  @include small-mobile {
-    width: 85%;
   }
   display: flex;
   margin: 3em auto 0 auto;
@@ -61,6 +58,7 @@
 .presentation-text {
   @include large-mobile {
     font-size: 1em;
+    padding: 1em;
   }
   font-size: 1.3em;
 }
