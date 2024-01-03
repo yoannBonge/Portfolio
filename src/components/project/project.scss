@@ -264,8 +264,11 @@
 }
 
 .modal {
+  @include mid-desktop {
+    justify-content: flex-start;
+  }
   @include large-mobile {
-    width: 75vw;
+    width: 75%;
   }
   position: absolute;
   top: 50%;
@@ -273,21 +276,24 @@
   transform: translate(-50%, -50%);
   background-color: #0d0b0c;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding: 20px;
   border-radius: 10px;
   border: none;
   box-shadow: 0px 0px 5px rgb(255, 255, 255);
   z-index: 1000;
-  width: 70vw;
-  height: 75vh;
+  width: 70%;
+  height: 75%;
+  overflow-y: auto;
 }
 
 .modal-content {
   @include tablet {
     overflow-y: auto;
+    padding: 2em;
   }
-  padding: 2em;
+  padding: 2vw 2em;
   .fa-solid {
     @include tablet {
       font-size: 1em;
@@ -302,7 +308,7 @@
 }
 
 .image-and-details {
-  @include tablet {
+  @include mid-desktop {
     flex-direction: column;
     gap: 1em;
   }
@@ -311,11 +317,13 @@
 
 .responsive-illustration {
   @include mid-desktop {
-    height: 13.1em;
-    margin: auto;
+    width: 30em;
+    height: auto;
+    margin: -1em auto 0 auto;
+    padding: 0;
   }
   @include tablet {
-    width: 70%;
+    width: 90%;
     height: auto;
     margin-top: -1.5em;
   }
@@ -323,20 +331,27 @@
     width: 100%;
     height: auto;
   }
-  height: 24em;
+  height: 22vw;
+  padding-bottom: 1.5em;
 }
 
 .details {
   @include mid-desktop {
-    font-size: 1em;
-  }
-  @include tablet {
+    font-size: 1.6vw;
+    text-align: justify;
     margin: 0;
   }
-  font-size: 1.2em;
+  @include tablet {
+    font-size: 2.3vw;
+  }
+  @include large-mobile {
+    font-size: 2.5vw;
+  }
+  font-size: 1.3vw;
   margin-left: 1em;
+  overflow-y: auto;
   .purple {
-    @include tablet {
+    @include mid-desktop {
       display: block;
       text-align: center;
       margin-bottom: -1em;
@@ -347,7 +362,8 @@
 
 .links-container {
   @include mid-desktop {
-    top: 75%;
+    margin-top: 1em;
+    justify-content: space-evenly;
   }
   @include tablet {
     position: static;
@@ -356,8 +372,7 @@
   }
   display: flex;
   gap: 3em;
-  position: absolute;
-  top: 83%;
+  margin-top: -2em;
 }
 
 .link-wrapper {
@@ -369,14 +384,20 @@
 }
 
 .link {
+  @include mid-desktop {
+    font-size: 1.5vw;
+  }
+  @include tablet {
+    font-size: 1.8vw;
+  }
   @include large-mobile {
-    font-size: 0.8em;
+    font-size: 3vw;
   }
   color: white;
   white-space: nowrap;
   text-decoration: none;
   background-color: $purple;
-  font-size: 0.9em;
+  font-size: 1.1vw;
   width: fit-content;
   padding: 0.5em;
   border-radius: 5px;
