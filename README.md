@@ -19,7 +19,7 @@ Development of my first personal website, a portfolio presenting the projects I 
 
 To deploy this project run
 
-https://portfolio-chi-ochre-88.vercel.app/
+https://portfolio-yoann-bonges-projects.vercel.app/
 
 
 ## Lessons Learned
