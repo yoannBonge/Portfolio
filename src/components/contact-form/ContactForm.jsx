@@ -35,8 +35,7 @@ const ContactForm = () => {
           message: formData.message,
         }
       )
-      .then((response) => {
-        console.log("E-mail envoyé avec succès:", response);
+      .then(() => {
         setIsEmailSent(true);
         setIsSendingEmail(false);
         setTimeout(() => {
