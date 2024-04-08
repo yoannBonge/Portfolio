@@ -20,6 +20,7 @@ $sass-color: #ce6b9c;
 $node-color: #58a149;
 $mongodb-color: #419a45;
 $express-color: #f7e01d;
+$typescript-color: #077aca;
 $openclassrooms-color: #7451eb;
 
 ///////////////////LOGOS SIZES
@@ -41,6 +42,14 @@ $openclassrooms-color: #7451eb;
 }
 @mixin express-logo-dimensions {
   width: 12em;
+  margin: 2vw;
+}
+@mixin typescript-logo-dimensions {
+  width: 6em;
+  margin: 2vw;
+}
+@mixin mern-logo-dimensions {
+  width: 15.9em;
   margin: 2vw;
 }
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import SocialLinks from "../social-links/SocialLinks";
 import "./header.scss";

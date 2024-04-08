@@ -15,7 +15,8 @@
     padding: 0.5em 1.5em;
   }
   height: 30vw;
-  width: auto;
+  width: 94vw;
+  margin: auto;
   display: flex;
   gap: 2.5vw;
   padding: 1.5em;
@@ -249,7 +250,28 @@
   }
   /////////////////////////////////////////////////
   .express-logo {
-    width: 40%;
+    // @include large-mobile {
+    //   width: 10%;
+    // }
+    @include express-logo-dimensions;
+    width: 50%;
+  }
+  /////////////////////////////////////////////////
+  .typescript-logo {
+    @include mid-desktop {
+      width: 20%;
+      margin: 1vw;
+    }
+    @include typescript-logo-dimensions;
+    width: 8vw;
+  }
+  /////////////////////////////////////////////////
+  .mern-logo {
+    @include mid-desktop {
+      width: 59%;
+      margin: 1vw;
+    }
+    @include mern-logo-dimensions;
   }
 }
 

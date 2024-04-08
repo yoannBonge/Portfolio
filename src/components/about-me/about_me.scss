@@ -1,4 +1,4 @@
-@import "/common.scss";
+@import "common.scss";
 
 .about {
   @include mid-desktop {
@@ -71,36 +71,4 @@
 .author {
   text-align: left;
   margin-top: 1em;
-}
-
-#my-projects {
-  @include large-mobile {
-    padding: 0 1em;
-  }
-  padding: 0 2em;
-
-  .projects-items {
-    @include large-mobile {
-      gap: 3em;
-    }
-    display: grid;
-    gap: 6em;
-  }
-}
-
-#my-skills {
-  width: 100%;
-}
-
-#contact {
-  @include mid-desktop {
-    width: 50%;
-  }
-  @include tablet {
-    width: 60%;
-  }
-  @include large-mobile {
-    width: 90%;
-  }
-  width: 40%;
 }

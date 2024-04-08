@@ -1,6 +1,6 @@
-import { useForm } from "react-hook-form";
-import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
+import { useEffect, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
 import "./contact_form.scss";
 
 const ContactForm = () => {
@@ -22,15 +22,19 @@ const ContactForm = () => {
   };
 
   const sendEmail = (formData) => {
-    emailjs.init("GKbxwUtQ-zboHILR1");
+    emailjs.init(import.meta.env.VITE_EMAILJS_API_KEY);
 
     emailjs
-      .send("service_hvzjpke", "template_2koyoh5", {
-        to_email: "yoannbonge@live.fr",
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      })
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICEID,
+        import.meta.env.VITE_EMAILJS_TEMPLATEID,
+        {
+          to_email: import.meta.env.VITE_EMAIL_TO,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }
+      )
       .then((response) => {
         console.log("E-mail envoyé avec succès:", response);
         setIsEmailSent(true);
@@ -64,8 +68,8 @@ const ContactForm = () => {
     <>
       <div className='introduction-container'>
         <p className='introduction'>
-          Pour toute question, demande d'information ou autre, c'est ici que ça
-          se passe.
+          Pour toute question, demande d&apos;information ou autre, c&apos;est
+          ici que ça se passe.
         </p>
       </div>
 

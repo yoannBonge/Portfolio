@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faSquareXTwitter,
-  faSquareGithub,
   faLinkedin,
+  faSquareGithub,
+  faSquareXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./social_links.scss";
 
 const SocialLinks = ({ hideInMobile }) => {
