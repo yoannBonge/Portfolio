@@ -7,29 +7,32 @@ import {
   faSass,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
+import projectsData from "../../../public/projects.json";
 import "./projects.scss";
 
 const Projects = () => {
   //////////////////////////////////////////////////////////////////////STATE
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [projects, setProjects] = useState([]);
+  // const [projects, setProjects] = useState(projectsData);
   const [currentProject, setCurrentProject] = useState(null);
 
   //////////////////////////////////////////////////////////////////////BEHAVIOR
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await fetch("/public/projects.json");
-        const data = await response.json();
-        setProjects(data);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des données :", error);
-      }
-    };
-    fetchProjects();
-  }, []);
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     try {
+  //       const response = await fetch("/public/projects.json");
+  //       const data = await response.json();
+  //       setProjects(data);
+  //     } catch (error) {
+  //       console.error("Erreur lors de la récupération des données :", error);
+  //     }
+  //   };
+  //   fetchProjects();
+  // }, []);
+
+  const projects = projectsData;
 
   const openModal = (project) => {
     setCurrentProject(project);
