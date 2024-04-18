@@ -64,7 +64,7 @@
     "mainScreenshot": "those-behind-the-music.webp",
     "summary": "Développement d'une application MERN",
     "detailsContext": "(Projet personnel)",
-    "details": "Mon premier projet personnel : une application MERN dont le but est d'afficher des compositeurs de musique dont les informations sont stockées dans une base de données MongoDB Atlas que j'alimente moi-même. Le site n'est pas tout à fait optimal, notamment concernant la lecture des vidéos YouTube en version mobile... Mais j'y travaille !",
+    "details": "Mon premier projet personnel : une application MERN dont le but est d'afficher des compositeurs de musique dont les informations sont stockées dans une base de données MongoDB Atlas que j'alimente moi-même. Le site n'est pas tout à fait optimal, notamment concernant son affichage sur d'autres navigateurs que Google Chrome ainsi que la lecture des vidéos YouTube en version mobile... Mais j'y travaille !",
     "responsiveIllustration": "those-behind-the-music-responsive.webp",
     "deployment": "https://those-behind-the-music.vercel.app/",
     "githubLink": "",
