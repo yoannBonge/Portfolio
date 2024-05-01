@@ -165,6 +165,7 @@
   @include mid-desktop {
     flex-direction: row;
   }
+  // background-color: red;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -250,9 +251,6 @@
   }
   /////////////////////////////////////////////////
   .express-logo {
-    // @include large-mobile {
-    //   width: 10%;
-    // }
     @include express-logo-dimensions;
     width: 50%;
   }
@@ -272,6 +270,7 @@
       margin: 1vw;
     }
     @include mern-logo-dimensions;
+    width: 90%;
   }
 }
 
