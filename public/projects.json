@@ -67,7 +67,7 @@
     "details": "Mon premier projet personnel : une application MERN dont le but est de présenter des compositeurs de musique (ainsi qu'une sélection de leurs morceaux grâce à l'intégration de vidéos YouTube dans l'application) dont les informations sont stockées dans une base de données MongoDB Atlas que j'alimente moi-même. Le site n'est pas tout à fait optimal, notamment concernant son affichage sur d'autres navigateurs que Google Chrome ainsi que la lecture des vidéos YouTube en version mobile... Mais j'y travaille !",
     "responsiveIllustration": "those-behind-the-music-responsive.webp",
     "deployment": "https://those-behind-the-music.vercel.app/",
-    "githubLink": "",
+    "githubLink": "https://github.com/yoannBonge/ThoseBehindTheMusic",
     "toolsIcons": ["mern", "ts"],
     "reverseRow": true
   }
